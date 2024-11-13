@@ -1,0 +1,92 @@
+/* Left Sidebar Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px; /* Adjust width depending on your design */
+  background-color: #56758F;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 40px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect for separation */
+}
+
+/* Links inside the left navbar */
+.navbar a {
+  color: white;
+  margin: 20px 0;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar a svg {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.navbar a:hover {
+  color: #ffcc00; /* Highlight on hover */
+}
+
+/* Make the left navbar responsive for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    width: 50px; /* Smaller width for mobile */
+  }
+}
+
+/* Top Navbar */
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; /* Full width at the top */
+  height: 60px; /* Adjust height as needed */
+  background-color: #56758F;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px; /* Add space on the right side */
+  /* z-index: 1000; Ensure it stays on top of other elements */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  */
+}
+
+/* Account icon styles */
+.account-icon {
+  /* background-color: #333; */
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.account-icon a {
+  color: white;
+}
+
+.account-icon a:hover {
+  color: #ffcc00; /* Highlight on hover */
+}
+
+/* Body content padding to avoid overlap with the sidebar and top navbar */
+body {
+  padding-left: 200px; /* Same width as the left navbar */
+  padding-top: 60px; /* Same height as the top navbar */
+  margin: 0;
+}
+
+/* Optional: If you want to apply some margin to the body to give space around the content */
+body {
+  margin: 0;
+  padding-left: 200px; /* Sidebar width */
+  padding-top: 60px; /* Top navbar height */
+}
+
+/* Responsive: Adjust padding for smaller screens */
+@media (max-width: 768px) {
+  body {
+    padding-left: 50px; /* Adjust for smaller sidebar */
+  }
+}

@@ -1,0 +1,110 @@
+/* HomePage.css */
+.home-page {
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    text-align: center; /* Center text */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-size: cover;
+    background-position: center;
+    color: #000000; /* White text for contrast on dark backgrounds */
+    min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+    overflow: hidden; /* Hide overflow if necessary */
+  }
+  
+  .home-page h2 {
+    font-size: 3rem;
+    color: #0a0a0a;
+    margin: 0; /* No margin */
+    text-align: center;
+    z-index: 1; /* Ensure text is above the button */
+    padding-bottom: 20px; /* Optional: Space below the heading */
+  }
+  
+  /* Card with backdrop blur */
+  .card {
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply blur effect to background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 40px 50px;
+    z-index: 1; /* Ensure card content is above the animation */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for the card */
+    position: relative;
+  }
+  
+  .home-page .button-container {
+    display: flex; /* Use Flexbox to arrange buttons */
+    gap: 20px; /* Space between buttons */
+    z-index: 1; /* Ensure buttons are above background */
+  }
+  
+  .rotate-button {
+    background: transparent;
+    color: #000000;
+    font-size: 27px;
+    font-family: 'Arial', sans-serif; /* Add a standard font family */
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: 20px 30px;
+    cursor: pointer;
+    perspective: 30rem; /* Add perspective for 3D effect */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(212, 20, 20, 0.308);
+    position: relative; /* Position relative to allow the pseudo-element to be positioned inside the button */
+    overflow: hidden; /* Prevent overflow of the pseudo-element */
+    transition: transform 0.3s ease; /* Add smooth transition for scaling */
+  }
+  
+  .rotate-button:hover {
+    animation: rotateOnce 1s forwards; /* Rotate only once when hovered */
+  }
+  
+  @keyframes rotateOnce {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg); /* Full rotation */
+    }
+  }
+  
+  .rotate-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(320deg, rgba(58, 167, 255, 0.678), rgba(10, 10, 10, 0.308));
+    z-index: -1; /* Ensure the background is behind the text */
+    transition: transform 3s ease; /* Smooth rotation of background */
+    transform-origin: center; /* Ensure the rotation happens from the center */
+  }
+  
+  .rotate-button:hover::before {
+    animation: rotateBackgroundOnce 1s forwards; /* Rotate the background once */
+  }
+  
+  @keyframes rotateBackgroundOnce {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg); /* Full rotation for background */
+    }
+  }
+  
+  .rotate-button svg {
+    margin-right: 10px;
+  }
+  
+  .rotate-button span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  

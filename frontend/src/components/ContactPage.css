@@ -1,0 +1,61 @@
+.contact-page {
+    text-align: center;
+    background-image: url('../assets/W_Contact.jpg'); /* Background image path */
+    background-size: cover;
+    background-position: center;
+    color: black; /* Black text color for contrast */
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0; /* Remove default margin */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+.contact-page h2 {
+    font-size: 2.5rem;
+    color: rgb(248, 244, 244); /* Black text */
+    font-weight: bold; /* Bold text */
+    margin: 20px 0; /* Adjusted margin to reduce space */
+}
+
+.contact-page .contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap if there's not enough space */
+    gap: 20px; /* Space between items */
+}
+
+.contact-page .contact-info div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center; /* Center text within the flex container */
+}
+
+.contact-page .contact-info img {
+    border-radius: 50%;
+    width: 150px; /* Larger size for the images */
+    height: 150px; /* Larger size for the images */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.contact-page .contact-info .details {
+    font-size: 1rem;
+    color: rgb(243, 238, 238); /* Black text */
+    font-weight: bold; /* Bold text */
+}
+
+.contact-page .contact-info .details p {
+    margin: 5px 0; /* Adjust margin for better spacing */
+}
+
+.contact-page .contact-info .details a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-page .contact-info .details a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

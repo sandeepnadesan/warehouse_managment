@@ -1,0 +1,37 @@
+.view-goods-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .goods-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .goods-table th,
+  .goods-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .goods-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .goods-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .goods-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  

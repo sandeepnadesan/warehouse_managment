@@ -1,0 +1,32 @@
+/* components/AboutPage.css */
+.about-page {
+    text-align: center;
+    margin-top: 0; /* Remove any extra top margin */
+    background-image: url('../assets/W_About.webp'); /* Update path to your background image */
+    background-size: cover;
+    background-position: center;
+    color: #1b1a1a; /* White text for contrast */
+    min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+    padding: 20px; /* Add some padding for better spacing */
+  }
+  
+  .about-page h2 {
+    font-size: 3rem; /* Larger font size for better visibility */
+    color: #131212; /* White text */
+    margin-bottom: 20px; /* Space below the heading */
+    font-weight: bold; /* Bold font */
+  }
+  
+  .about-page p {
+    font-size: 1.5rem; /* Larger font size */
+    color: #141414; /* Light gray text for contrast */
+    margin-bottom: 30px; /* Space below the paragraph */
+    font-weight: bold; /* Bold font */
+  }
+  
+  .about-page .company-name {
+    font-size: 2rem; /* Larger font size for the company name */
+    color: #000; /* Black color for company name */
+    font-weight: bold; /* Bold font */
+  }
+  
