@@ -25,7 +25,7 @@ function ScanGoods() {
     setLoading(true);
     setIsProcessing(true);
     try {
-      await axios.post('https://warehouse-managment-4lzo.onrender.com/import', {
+      await axios.post('http://localhost:5000/import', {
         name: result,
         weight: 1,
         expiryDate: new Date(),
@@ -48,7 +48,7 @@ function ScanGoods() {
     setLoading(true);
     setIsProcessing(true);
     try {
-      await axios.post('https://warehouse-managment-4lzo.onrender.com/export', { name: result });
+      await axios.post('http://localhost:5000/export', { name: result });
 
       setTimeout(() => {
         setLoading(false);
