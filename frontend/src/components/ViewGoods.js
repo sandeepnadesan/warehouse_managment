@@ -7,7 +7,7 @@ const ViewGoods = () => {
   useEffect(() => {
     const fetchGoods = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/goods");
+        const response = await fetch(`${process.env.REACT_APP_URL}api/goods`);
         const data = await response.json();
         console.log("Fetched Goods: ", data);
         setGoods(data);
