@@ -1,37 +1,67 @@
+/* Container to center content */
 .view-goods-container {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .error-message {
-    color: red;
-    font-weight: bold;
-  }
-  
-  .goods-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .goods-table th,
-  .goods-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .goods-table th {
-    background-color: #f4f4f4;
-  }
-  
-  .goods-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .goods-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Table styling */
+table {
+  width: 80%; /* Adjust table width to fit well within the screen */
+  max-width: 1000px; /* Maximum width */
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table header */
+th {
+  background-color: #4CAF50; /* Light green background */
+  color: white;
+  padding: 80px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Table rows */
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Zebra striping for table rows */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Hover effect for rows */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Message when no goods available */
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  font-style: italic;
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}

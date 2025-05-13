@@ -26,14 +26,14 @@ db.once('open', () => {
 const Goods = require('./models/goodsModel');
 
 // Example Route for Scanning Goods
-app.post('/scan-goods', (req, res) => {
+app.post('/api/scan-goods', (req, res) => {
   const { scannedData } = req.body;
   console.log('Scanned data:', scannedData);
   res.status(200).json({ message: 'Scanned data received', data: scannedData });
 });
 
 // Import Goods
-app.post('/import', async (req, res) => {
+app.post('/api/import', async (req, res) => {
   try {
     console.log('Import request received:', req.body);
 
@@ -55,7 +55,7 @@ app.post('/import', async (req, res) => {
 });
 
 // Export Goods
-app.post('/export', async (req, res) => {
+app.post('/api/export', async (req, res) => {
   const { name } = req.body;
 
   if (!name) {

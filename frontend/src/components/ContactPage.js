@@ -23,14 +23,7 @@ function Contact() {
             <p>Mobile: 8072636468</p>
             <p>Email: <a href="mailto:vasanthasrit.com">vasanthasrit@gmail.com</a></p> {/* Replace with actual email */}
           </div>
-        <div>
-            <img src={KaarthiImage} alt="Kaarthi g" />
-            <div className="details">
-              <p><strong>Kaarthi G</strong></p>
-              <p>Mobile: 7904218679</p>
-              <p>Email: <a href="mailto:kaarthig.22aim@kongu.edu">kaarthig.22aim@kongu.edu</a></p> {/* Replace with actual email */}
-          </div>
-        </div>
+
         </div>
       </div>
     </div>

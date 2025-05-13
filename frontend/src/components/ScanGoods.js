@@ -25,7 +25,7 @@ function ScanGoods() {
     setLoading(true);
     setIsProcessing(true);
     try {
-      await axios.post('http://localhost:5000/import', {
+      await axios.post(`${process.env.REACT_APP_URL}api/import`, {
         name: result,
         weight: 1,
         expiryDate: new Date(),
@@ -48,7 +48,7 @@ function ScanGoods() {
     setLoading(true);
     setIsProcessing(true);
     try {
-      await axios.post('http://localhost:5000/export', { name: result });
+      await axios.post(`${process.env.REACT_APP_URL}export`, { name: result });
 
       setTimeout(() => {
         setLoading(false);
