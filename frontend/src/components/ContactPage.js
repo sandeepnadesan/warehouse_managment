@@ -9,19 +9,10 @@ function Contact() {
       <h2>Contact Us</h2>
       <div className="contact-info">
         <div>
-          <img src={sandeepImage} alt="Sandeep N" />
           <div className="details">
-            <p><strong>Sandeep N</strong></p>
-            <p>Mobile: 9944882544</p>
-            <p>Email: <a href="mailto:sandeepnadesankns.com">sandeepnadesankns@gmail.com</a></p> {/* Replace with actual email */}
-          </div>
-        </div>
-        <div>
-          <img src={vasanthasriImage} alt="Vasanthasri T" />
-          <div className="details">
-            <p><strong>Vasanthasri T</strong></p>
-            <p>Mobile: 8072636468</p>
-            <p>Email: <a href="mailto:vasanthasrit.com">vasanthasrit@gmail.com</a></p> {/* Replace with actual email */}
+            <p><strong>Sri Vishal Traders</strong></p>
+            <p>Mobile: 9500628734</p>
+            <p>Email: <a href="mailto:srivishaltraders.com">srivishaltraders@gmail.com</a></p> {/* Replace with actual email */}
           </div>
 
         </div>

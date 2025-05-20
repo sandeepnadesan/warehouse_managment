@@ -1,67 +1,63 @@
-/* Container to center content */
 .view-goods-container {
-  padding: 50px;
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding-left: 250px; /* Adjust for sidebar */
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
+.view-goods-content {
+  width: 100%;
+  max-width: 600px; /* Forces narrow content */
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Table styling */
 table {
-  width: 80%; /* Adjust table width to fit well within the screen */
-  max-width: 1000px; /* Maximum width */
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
   border-collapse: collapse;
-  margin-top: 20px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
 }
 
-/* Table header */
+/* Table Header */
 th {
-  background-color: #4CAF50; /* Light green background */
+  background-color: #4CAF50;
   color: white;
-  padding: 80px;
-  text-align: left;
+  padding: 12px;
+  text-align: center;
   font-weight: bold;
 }
 
-/* Table rows */
+/* Table Rows */
 td {
   padding: 10px;
   border: 1px solid #ddd;
-  text-align: left;
+  text-align: center;
 }
 
-/* Zebra striping for table rows */
+/* Alternating row colors */
 tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-
 tr:nth-child(odd) {
   background-color: #ffffff;
 }
 
-/* Hover effect for rows */
+/* Hover effect */
 tr:hover {
   background-color: #f1f1f1;
 }
 
-/* Message when no goods available */
-p {
-  text-align: center;
-  font-size: 18px;
-  color: #555;
-  font-style: italic;
-}
-
 /* Heading */
 h2 {
-  text-align: center;
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
+  text-align: center;
 }

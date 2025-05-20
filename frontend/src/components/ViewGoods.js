@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
+import './ViewGoods.css';
 
 const ViewGoods = () => {
   const [goods, setGoods] = useState([]);
-  
-  // Fetch goods from the backend API
+
   useEffect(() => {
     const fetchGoods = async () => {
       try {
         const response = await fetch(`${process.env.REACT_APP_URL}api/goods`);
         const data = await response.json();
-        console.log("Fetched Goods: ", data);
         setGoods(data);
       } catch (error) {
         console.error("Error fetching goods:", error);
@@ -18,18 +17,17 @@ const ViewGoods = () => {
     fetchGoods();
   }, []);
 
-  // Parse the JSON string in the name field and return the properties to display
-  const parseGoodsData = (goodsData) => {
+  // Parse the JSON string in the name field safely
+  const parseGood = (good) => {
     try {
-      console.log("Raw goodsData.name: ", goodsData.name);  // Log the raw data
-      const parsedData = JSON.parse(goodsData.name);  // Attempt to parse the data
-      return parsedData;
-    } catch (error) {
-      console.error("Error parsing goods data: ", error.message);
-      return {};  // Return an empty object if parsing fails
+      if (typeof good.name === "string") {
+        return JSON.parse(good.name);
+      }
+      return good.name; // if already an object
+    } catch {
+      return {}; // fallback empty object if parse fails
     }
   };
-  
 
   return (
     <div>
@@ -48,13 +46,13 @@ const ViewGoods = () => {
           </thead>
           <tbody>
             {goods.map((good) => {
-              const parsedGood = parseGoodsData(good);
+              const parsed = parseGood(good);
               return (
                 <tr key={good._id}>
-                  <td>{parsedGood.item}</td>
-                  <td>{parsedGood.quantity}</td>
-                  <td>{parsedGood.expiryDate}</td>
-                  <td>{parsedGood.weight}</td>
+                  <td>{parsed.item || "N/A"}</td>
+                  <td>{parsed.quantity || "N/A"}</td>
+                  <td>{parsed.expiryDate || "N/A"}</td>
+                  <td>{parsed.weight || "N/A"}</td>
                 </tr>
               );
             })}
